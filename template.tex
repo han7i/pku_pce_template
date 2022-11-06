@@ -1,0 +1,99 @@
+\documentclass[UTF8,twoside,zihao=-4]{ctexart}
+%奇偶页不同页眉需要设置twoside
+
+\usepackage[a4paper,top=2.5cm,bottom=2.5cm,left=2.5cm,right=2.5cm]{geometry} % 控制页边距
+
+\usepackage{fancyhdr} % 自定义页眉页脚
+	\fancyhead{} % 清除所有页眉字段 
+	\fancyhead[RO,LE]{物理化学实验} 
+	\fancyhead[LO,RE]{2022}
+	\fancyfoot{} % 清除所有页脚字段 
+	\fancyfoot[CO,CE]{\thepage}
+
+\usepackage{graphicx} % 插入图片
+
+\usepackage{amsmath}
+\usepackage{amssymb} % 提供数学环境与符号
+
+\usepackage{diagbox} % 表头斜线格
+\usepackage{threeparttable} % 表格注释
+\usepackage{booktabs} % 三线表
+
+\usepackage{setspace} % 调整空格长度
+
+\usepackage[super]{natbib} % 引用文献，标号置于上标
+	\bibliographystyle{jpc} % 物理化学期刊A引用格式
+% 引用中文文献请使用biblatex
+
+\renewcommand{\thefootnote}{\textit{\arabic{footnote}}} % 引用标号使用数字
+
+\begin{document}
+	\pagestyle{empty} % 标题页不显示页数
+	\begin{figure}[t]
+		\centering
+		\zihao{0}\includegraphics[height = 2.0 em]{pkulogo.pdf}\hspace{0.3em}%
+		\raisebox{0.32em}{\includegraphics[height = 1.4 em]{pkuword.pdf}}
+	\end{figure} % 贵校校徽与题字
+    \begin{center}
+        \heiti \fontsize{45}{17} 物理化学实验
+        \vskip 5 em
+		\parbox{0.7\textwidth}{
+		\heiti \fontsize{25}{20} \centering
+		实验名称
+		}
+    \end{center}
+    \vskip 10 em
+
+    \begin{quotation}
+		\songti \fontsize{20}{17}
+		\begin{center}
+		\hspace*{-2 em}\begin{tabular}{cc}
+			姓\hspace{3.4 em}名： & \makebox[8em]{\fontsize{16}{15} 
+			hanji % 姓名
+			}\\
+			\cline{2-2}
+			学\hspace{3.4 em}号： & \makebox[8em]{\large 
+			0000000000 % 学号
+			}\\
+			\cline{2-2}
+			分\hspace{3.4 em}组： & \makebox[8em]{\large 
+			1 % 分组
+			}\\
+			\cline{2-2}
+			组内编号： & \makebox[8em]{\large 
+			1 % 分组
+			}\\
+			\cline{2-2}
+        	实验日期：& \makebox[8em]{\large 
+			2022.11.01 % 日期
+			}\\
+			\cline{2-2}
+			室\hspace{3.4 em}温：& \makebox[8em]{\large 
+			25 % 温度
+			\;{\normalsize$^\circ$}C}\\
+			\cline{2-2}
+			气\hspace{3.4 em}压：& \makebox[8em]{\large 
+			100 % 气压
+			\;kPa}\\
+			\cline{2-2}
+		\end{tabular}
+		\end{center}
+    \end{quotation}
+	\begin{center}
+	\vskip 4 em
+	\parbox{0.8\textwidth}{\zihao{-4} \textbf{摘要}：
+	泉涸，鱼相与处于陆，相呴以湿，相濡以沫，不如相忘于江湖。与其誉尧而非桀，不如两忘而化其道。夫大块载我以形，劳我以生，佚我以老，息我以死。故善吾生者，乃所以善吾死也。
+	}
+	\vskip 5 em
+	{\Large 二〇二二年十一月}
+	\end{center}
+	\clearpage 
+	%\null
+	%\clearpage %如需打印，应留出空白封面内页
+\pagestyle{fancy}
+\setcounter{page}{1} % 内页开始计数
+\section{引言}
+\section{数据处理}
+\section{讨论与结论}
+\bibliography{template.bib}
+\end{document}
